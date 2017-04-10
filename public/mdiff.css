@@ -1,0 +1,9 @@
+del.del {
+	text-decoration: line-through red;
+	color: #AAAAAA;
+}
+ins {
+	text-decoration: none;
+	font-weight: bold;
+	color: #3333FF;
+}

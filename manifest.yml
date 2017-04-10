@@ -1,0 +1,4 @@
+---
+applications:
+- name: sinatmdiff
+  memory: 128M

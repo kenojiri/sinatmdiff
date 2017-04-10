@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css">
+    <link rel="stylesheet" href="/mdiff.css" type="text/css">
+  </head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container">
+	<a class="navbar-brand" href="#">Markdown Differ</a>
+	<div class="navbar-collapse justify-content-end collapse" id="navbarSupportedContent" aria-expanded="false">
+	  <div class="navbar-nav">
+	    <div class="container">
+	      <table class="table">
+		<thead>
+		  <tr>
+		    <th></th>
+		    <th>posted at</th>
+		    <th class="text-right"><button class="btn btn-lg btn-secondary" data-toggle="modal" data-target="#new-modal">New Markdown</button></th>
+		  </tr>
+		</thead>
+		<tbody id="list">
+		  <tr>
+		    <td colspan="3">
+		      now loading...
+		    </td>
+		  </tr>
+		</tbody>
+	      </table>
+	    </div>
+	  </div>
+	</div>
+      </div>
+    </nav>
+    <div class="py-5 section">
+      <div class="container">
+	<div class="row">
+	  <div class="col-md-12">
+	    <div id="diff"> now loading... </div>
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div class="modal fade" id="new-modal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+	<div class="modal-content">
+	  <div class="modal-header">
+	    <button class="close" data-dismiss="modal" type="button">×</button>
+	    <h4 class="modal-title">New Markdown</h4>
+	  </div>
+	  <div class="modal-body">
+	    <textarea class="form-control" rows="5" placeholder="markdown" id="newmarkdown"></textarea>
+	  </div>
+	  <div class="modal-footer"> <button class="btn btn-default" data-dismiss="modal">Cancel</button> <button class="btn btn-danger" data-dismiss="modal" id="new">POST</button> </div>
+	</div>
+      </div>
+    </div>
+    <div class="modal fade" id="preview-modal">
+      <div class="modal-dialog modal-lg">
+	<div class="modal-content">
+	  <div class="modal-header">
+	    <button class="close" data-dismiss="modal" type="button">×</button>
+	    <h4 class="modal-title">preview</h4>
+	  </div>
+	  <div class="modal-body">
+	    <div id="preview"> markdown preview </div>
+	  </div>
+	  <div class="modal-footer"> <a class="btn btn-info" data-dismiss="modal">OK</a> </div>
+	</div>
+      </div>
+    </div>
+    <div class="modal fade" id="edit-modal">
+      <div class="modal-dialog modal-lg">
+	<div class="modal-content">
+	  <div class="modal-header">
+	    <button class="close" data-dismiss="modal" type="button">×</button>
+	    <h4 class="modal-title">Edit Markdown</h4>
+	  </div>
+	  <div class="modal-body">
+	    <textarea class="form-control" rows="5" placeholder="markdown" id="editmarkdown"></textarea>
+	  </div>
+	  <div class="modal-footer"> <button class="btn btn-default" data-dismiss="modal">Cancel</button> <button class="btn btn-danger mdiff-edit-confirm" data-dismiss="modal">POST</button> </div>
+	</div>
+      </div>
+    </div>
+    <div class="modal fade" id="delete-modal">
+      <div class="modal-dialog">
+	<div class="modal-content">
+	  <div class="modal-header">
+	    <button class="close" data-dismiss="modal" type="button">×</button>
+	    <h4 class="modal-title">really delete?</h4>
+	  </div>
+	  <div class="modal-body">
+	    <p> posted_at </p>
+	  </div>
+	  <div class="modal-footer"> <a class="btn btn-default" data-dismiss="modal">Cancel</a> <a class="btn btn-danger mdiff-delete-confirm" data-dismiss="modal">Delete</a> </div>
+	</div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/mdiff.js"></script>
+  </body>
+</html>
