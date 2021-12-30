@@ -20,7 +20,7 @@ class Md < ActiveRecord::Base
 #  end
 end
 
-class MdMigration < ActiveRecord::Migration
+class MdMigration < ActiveRecord::Migration[7.0]
   def self.up
     create_table :mds do |t|
       t.text :markdown

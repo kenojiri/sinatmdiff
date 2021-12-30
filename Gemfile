@@ -1,8 +1,10 @@
 source "http://rubygems.org"
 
-ruby '2.6.1'
+ruby '3.0.0'
 
+gem "puma"
 gem "sinatra"
+gem "tzinfo-data"
 gem "activerecord"
 gem "markdiff"
 gem "redcarpet"

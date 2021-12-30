@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  app:
+    build: .
+    network_mode: "bridge"
+    ports:
+      - "4569:4567"
+    command: "ruby app.rb -e test"
+    restart: always

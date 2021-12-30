@@ -10,7 +10,7 @@ Ruby/SinatraとBootstrap 4でつくった、Markdown差分表示アプリです�
 * 他ホストからのアクセスを受け付けない場合
 
   ```
-  $ gem install bunder
+  $ gem install bundler
   $ bundle install
   $ ruby app.rb
   $ curl http://localhost:4567/
@@ -18,9 +18,9 @@ Ruby/SinatraとBootstrap 4でつくった、Markdown差分表示アプリです�
 * 他ホストからのアクセスも受け付けたい場合
 
   ```
-  $ gem install bunder
+  $ gem install bundler
   $ bundle install
-  $ RACK_ENV=test ruby app.rb
+  $ ruby app.rb -e test
   ```
 
   他ホストで
@@ -35,14 +35,14 @@ Ruby/SinatraとBootstrap 4でつくった、Markdown差分表示アプリです�
   予めMySQLサーバ上に、sinatmdiff用の論理データベースと、これにアクセス可能なアカウントが作成されていることが前提です。
 
   ```
-  $ gem install bunder
+  $ gem install bundler
   $ bundle install
-  $ RACK_ENV=production DATABASE_URL=mysql://【MySQLユーザ名】:【MySQLパスワード】@【MySQLホスト名】:【MySQLポート番号】/【MySQL論理DB名】 ruby app.rb
+  $ DATABASE_URL=mysql://【MySQLユーザ名】:【MySQLパスワード】@【MySQLホスト名】:【MySQLポート番号】/【MySQL論理DB名】 ruby app.rb -e production
   ```
 
 ## 単体テストの実行方法
 ```
-$ gem install bunder
+$ gem install bundler
 $ bundle install
 $ rspec app_spec.rb
 ```
